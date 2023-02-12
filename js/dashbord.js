@@ -36,12 +36,15 @@ document.getElementById("withdraw-btn").addEventListener("click", function () {
 
   totalWithdraw.innerText = currentWithdraw;
 
-  //
   const totalBalance = document.getElementById("total-balance");
   const newTotalBalanceString = totalBalance.innerText;
   const newTotalBalance = parseFloat(newTotalBalanceString);
 
   currentTotalBalance = newTotalBalance - newWithdrawField;
+
+  if (newWithdrawField > newTotalBalance) {
+    alert("insufficient balance. Please use Add Money.");
+  }
 
   totalBalance.innerText = currentTotalBalance;
 
