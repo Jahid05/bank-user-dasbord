@@ -1,0 +1,9 @@
+.banner{
+    background: linear-gradient(60deg,rgba(21, 194, 82, 0.213),rgba(12, 197, 132, 0.282)), url(../img/bg-img.jpg);
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashbord</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+  <header>
+    <h1 class="text-center m-4">User Dashbord</h1>
+  </header>
+  <main class="container mt-5">
+    <div class="row row-cols-1 row-cols-md-3 g-5">
+      <div class="col">
+        <div class="card h-75 bg-danger pb-5">
+          <div class="card-body text-light">
+            <h4 class="card-title">Deposit</h4>
+            <h1 class="card-text fw-bold">$<span id="total-deposit">00</span></h1>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-75 bg-warning pb-5">
+          <div class="card-body text-light">
+            <h4 class="card-title">Withdraw</h4>
+            <h1 class="card-text fw-bold">$<span id="total-withdraw">00</span></h1>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-75 bg-success pb-5">
+          <div class="card-body text-light">
+            <h4 class="card-title">Balance</h4>
+            <h1 class="card-text fw-bold">$<span id="total-balance">1000</span></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="col">
+        <div class="card bg-success text-light px-4 py-3">
+          <div class="card-body">
+            <h3 class="card-title mb-4">Please Deposit</h3>
+            <input class="form-control mb-4" type="number" id="deposit-field"
+              placeholder="$ amount you want to deposit">
+            <button class="btn btn-outline-light" id="deposit-btn">Deposit</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card bg-primary text-light px-4 py-3">
+          <div class="card-body">
+            <h3 class="card-title mb-4">Please Withdraw</h3>
+            <input class="form-control mb-4" type="number" id="withdraw-field"
+              placeholder="$ amount you want to withdraw">
+            <button class="btn btn-outline-light" id="withdraw-btn">Withdraw</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <!-- Script File -->
+  <script src="./js/dashbord.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
