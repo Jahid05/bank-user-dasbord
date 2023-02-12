@@ -32,21 +32,19 @@ document.getElementById("withdraw-btn").addEventListener("click", function () {
   const prevousWithdrawString = totalWithdraw.innerText;
   const prevousWithdraw = parseFloat(prevousWithdrawString);
 
-  const currentWithdraw = prevousWithdraw + newWithdrawField;
-
-  totalWithdraw.innerText = currentWithdraw;
-
   const totalBalance = document.getElementById("total-balance");
   const newTotalBalanceString = totalBalance.innerText;
   const newTotalBalance = parseFloat(newTotalBalanceString);
 
-  currentTotalBalance = newTotalBalance - newWithdrawField;
-
   if (newWithdrawField > newTotalBalance) {
     alert("insufficient balance. Please use Add Money.");
-  }
+  } else {
+    const currentWithdraw = prevousWithdraw + newWithdrawField;
+    totalWithdraw.innerText = currentWithdraw;
 
-  totalBalance.innerText = currentTotalBalance;
+    currentTotalBalance = newTotalBalance - newWithdrawField;
+    totalBalance.innerText = currentTotalBalance;
+  }
 
   withdrawField.value = "";
 });
